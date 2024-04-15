@@ -30,18 +30,22 @@
 
 .section_ttl {
   display: flex;
+  align-items: center;
 }
 
 #how_we_work h2 {
   font-size: 48px;
+  margin-right: 20px;
 }
 
 #how_we_work h3 {
-  font-size: 28px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 #how_we_work ul {
   color: black;
+  font-size: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,12 +54,19 @@
 }
 
 #how_we_work ul > li {
-  display: inline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
   background-color: white;
   margin-right: 30px;
   width: 300px;
   height: 300px;
   border-radius: 50%;
+}
+
+.emoji {
+  margin: -20px 0 20px 0;
 }
 
 #how_we_work ul > li:last-child {
