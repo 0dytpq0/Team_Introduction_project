@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        width: 1920px;
+        height: 1183px;
+      }
+      .contact {
+        background-color: #353535;
+        color: white;
+        width: 1380px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        #headline {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          height: 70px;
+          margin: 30px;
+          margin-top: 100px;
+          p {
+            display: flex;
+            align-items: end;
+            height: 100%;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            font-size: 28px;
+          }
+
+          h1 {
+            display: flex;
+            align-items: end;
+            height: 100%;
+            font-size: 48px;
+          }
+        }
+        #selector {
+          display: flex;
+          align-items: center;
+          margin: 30px;
+          margin-top: 50px;
+          select {
+            width: 316px;
+            height: 75px;
+            text-align: center;
+            font-size: 24px;
+            color: grey;
+          }
+          p {
+            padding-right: 40px;
+            font-size: 28px;
+            font-weight: bold;
+          }
+          #first {
+            display: none;
+            color: #a7a7a7;
+          }
+        }
+        #text {
+          display: flex;
+          flex-direction: column;
+
+          margin: 30px;
+          p {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+          }
+          textarea {
+            width: 1258px;
+            height: 316px;
+            padding: 30px;
+            font-size: 24px;
+            color: #a7a7a7;
+          }
+        }
+        #button_container {
+          display: flex;
+          justify-content: end;
+          margin: 10px;
+          margin-right: 28px;
+
+          button {
+            width: 190px;
+            height: 60px;
+            background-color: #9e43ff;
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+          }
+
+          button:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact">
+      <div id="headline">
+        <h1>Contact</h1>
+        <p>저희에게 관심있는 분들은 연락주세요.</p>
+      </div>
+      <div id="selector">
+        <p>메일 받는 사람</p>
+        <select id="selector_box">
+          <option disabled selected id="first">수신자를 선택하세요.</option>
+          <option>박요셉</option>
+          <option>박하린</option>
+          <option>이성찬</option>
+          <option>조민수</option>
+          <option>김용</option>
+          <option>이효현</option>
+        </select>
+      </div>
+      <div id="text">
+        <p>내용</p>
+        <textarea>내용을 작성해주세요.</textarea>
+      </div>
+      <div id="button_container">
+        <button>메일 보내기</button>
+      </div>
+    </div>
+  </body>
+</html>
