@@ -1,0 +1,159 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#gestbook {
+    width: 1920px;
+    display: block;
+    margin: 150px auto 0px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+#gestbook .container {
+    width: 1380px;
+    height: 1000px;
+    ;
+    margin: 0px auto;
+}
+
+#gestbook .backhome {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: #9E43FF;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#gestbook .backhome:hover {
+    box-shadow: 1px 1px 10px #9E43FF;
+}
+
+#gestbook .material-symbols-outlined {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 40px;
+    ;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24,
+}
+
+#gestbook .title {
+    font-size: 78px;
+    font-weight: bold;
+    margin-top: 80px;
+}
+
+#gestbook .title span {
+    color: #9E43FF
+}
+
+
+#gestbook .gestinfo {
+    width: 1380px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 100px;
+}
+
+/* 응원자 닉네임과 응원글 input */
+#gestbook #nickname {
+    width: 212px;
+    height: 80px;
+    box-sizing: border-box;
+    font-size: 32px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border: 1px solid #9E43FF;
+    border-radius: 10px;
+}
+
+#nickname::placeholder {
+    font-size: 32px;
+}
+
+
+#gestbook #supporttext {
+    width: 926px;
+    height: 80px;
+    box-sizing: border-box;
+    font-size: 32px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border: 1px solid #9E43FF;
+    border-radius: 10px;
+}
+
+#supporttext::placeholder {
+    font-size: 32px;
+}
+
+#gestbook .sendinfo {
+    background: #9E43FF;
+    color: #fff;
+    font-size: 32px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 202px;
+    height: 80px;
+    border: none;
+}
+
+/* 응원자 닉네임과 응원글 input */
+
+
+/* 응원자 닉네임과 응원글 input */
+
+#gesthistory {
+    width: 1380px;
+    border-top: 5px solid #9E43FF;
+    border-bottom: 5px solid #9E43FF;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    margin-top: 40px;
+}
+
+#gesthistory tr {
+    width: 1380px;
+    height: 80px;
+    border-bottom: 1px solid #A7A7A7;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#gesthistory tr:last-child {
+    border: none;
+}
+
+#gesthistory tr td {
+    height: 80px;
+    line-height: 80px;
+    font-size: 32px;
+}
+
+#gesthistory tr td:nth-of-type(1) {
+    width: 212px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    color: #9E43FF;
+    font-weight: bold
+}
+
+#gesthistory tr td:nth-of-type(2) {
+    width: 1148px;
+    padding-left: 24px;
+    box-sizing: border-box;
+}
