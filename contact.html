@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
+    <script src="./js/email.js" type="text/javascript"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "mKoeKytgDXvPQNwa7",
+        });
+      })();
+    </script>
     <style>
       * {
         margin: 0px;
@@ -53,6 +66,11 @@
               color: grey;
               border: none;
               border-radius: 10px;
+              -webkit-appearance: none; /* 크롬 화살표 없애기 */
+              -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+              appearance: none;
+              background: white url(./img/arrow_down.png) no-repeat 95% 50%;
+              border-radius: 6px;
             }
             p {
               padding-right: 40px;
@@ -118,7 +136,10 @@
         </div>
         <div class="selector">
           <p>메일 받는 사람</p>
-          <select class="selector_box">
+          <select
+            class="selector_box"
+            onchange="mailInstance.getSelectedValue()"
+          >
             <option disabled selected class="selector_first">
               수신자를 선택하세요.
             </option>
@@ -132,12 +153,26 @@
         </div>
         <div class="text">
           <p>내용</p>
-          <textarea>내용을 작성해주세요.</textarea>
+          <textarea id="message" placeholder="내용을 작성해주세요."></textarea>
         </div>
         <div class="button_container">
-          <button>메일 보내기</button>
+          <button onclick="mailInstance.sendMail()">메일 보내기</button>
         </div>
       </div>
     </div>
+
+    <script>
+      // 클래스의 인스턴스를 생성합니다.
+      const mailInstance = new Mail();
+
+      // 클래스의 메소드를 호출합니다.
+      function getSelectedValue() {
+        mailInstance.getSelectedValue();
+      }
+
+      function sendMail() {
+        mailInstance.sendMail();
+      }
+    </script>
   </body>
 </html>
