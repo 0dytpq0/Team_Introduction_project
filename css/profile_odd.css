@@ -127,6 +127,12 @@
 #profile a {
   text-decoration: none;
   color: black;
+  
+  
+}
+
+#profile a:hover {
+  text-decoration: underline;
 }
 
 #profile .profile-attributes {
