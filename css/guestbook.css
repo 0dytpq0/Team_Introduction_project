@@ -3,20 +3,20 @@
     padding: 0px;
 }
 
-#gestbook {
+#guestbook {
     display: block;
     margin: 150px auto 0px;
     font-family: "Noto Sans KR", sans-serif;
 }
 
-#gestbook .container {
+#guestbook .container {
     width: 1380px;
     height: 1000px;
     ;
     margin: 0px auto;
 }
 
-#gestbook .backhome {
+#guestbook .backhome {
     width: 100px;
     height: 100px;
     border-radius: 100px;
@@ -26,11 +26,11 @@
     transition: 0.5s;
 }
 
-#gestbook .backhome:hover {
+#guestbook .backhome:hover {
     box-shadow: 1px 1px 10px #9E43FF;
 }
 
-#gestbook .material-symbols-outlined {
+#guestbook .material-symbols-outlined {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -45,18 +45,18 @@
         'opsz' 24,
 }
 
-#gestbook .title {
+#guestbook .title {
     font-size: 78px;
     font-weight: bold;
     margin-top: 80px;
 }
 
-#gestbook .title span {
+#guestbook .title span {
     color: #9E43FF
 }
 
 
-#gestbook .gestinfo {
+#guestbook .guestinfo {
     width: 1380px;
     height: 80px;
     display: flex;
@@ -67,7 +67,7 @@
 }
 
 /* 응원자 닉네임과 응원글 input */
-#gestbook #nickname {
+#guestbook #nickname {
     width: 212px;
     height: 80px;
     box-sizing: border-box;
@@ -83,7 +83,7 @@
 }
 
 
-#gestbook #supporttext {
+#guestbook #supporttext {
     width: 926px;
     height: 80px;
     box-sizing: border-box;
@@ -98,7 +98,7 @@
     font-size: 32px;
 }
 
-#gestbook .sendinfo {
+#guestbook .sendinfo {
     background: #9E43FF;
     color: #fff;
     font-size: 32px;
@@ -114,7 +114,7 @@
 
 /* 응원자 닉네임과 응원글 input */
 
-#gesthistory {
+#guesthistory {
     width: 1380px;
     border-top: 5px solid #9E43FF;
     border-bottom: 5px solid #9E43FF;
@@ -123,7 +123,7 @@
     margin-top: 40px;
 }
 
-#gesthistory tr {
+#guesthistory tr {
     width: 1380px;
     height: 80px;
     border-bottom: 1px solid #A7A7A7;
@@ -133,17 +133,17 @@
     align-items: center;
 }
 
-#gesthistory tr:last-child {
+#guesthistory tr:last-child {
     border: none;
 }
 
-#gesthistory tr td {
+#guesthistory tr td {
     height: 80px;
     line-height: 80px;
     font-size: 32px;
 }
 
-#gesthistory tr td:nth-of-type(1) {
+#guesthistory tr td:nth-of-type(1) {
     width: 212px;
     padding-left: 30px;
     box-sizing: border-box;
@@ -151,8 +151,53 @@
     font-weight: bold
 }
 
-#gesthistory tr td:nth-of-type(2) {
-    width: 1148px;
+#guesthistory tr td:nth-of-type(2) {
+    width: 997px;
     padding-left: 24px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#guesthistory tr td:nth-of-type(3) {
+    width: 131px;
+    padding-left: 24px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#guesthistory tr td:nth-of-type(3)>div {
+    width: 42px;
+    height: 42px;
+    position: relative;
+}
+
+#guesthistory tr td:nth-of-type(3)>div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+#guestbook .editinvalue {
+    width: 880px;
+    padding-left: 24px;
+    box-sizing: border-box;
+    font-size: 32px;
+    padding-left: 0px;
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+
+#guestbook .completion {
+    background: #9E43FF;
+    color: #fff;
+    width: 87px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 22px;
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Form</title>
+    <script src="./js/email.js" type="text/javascript"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "mKoeKytgDXvPQNwa7",
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="fullName" placeholder="Full Name" required /><br />
+      <input type="email" id="email_id" placeholder="Email Id" required /><br />
+      <textarea id="message" placeholder="Message" required></textarea><br />
+      <button onclick="sendMail()">Send</button>
+    </div>
+
+    <script>
+      // 클래스의 인스턴스를 생성합니다.
+      const mailInstance = new Mail();
+
+      // 클래스의 메소드를 호출합니다.
+      function getSelectedValue() {
+        mailInstance.getSelectedValue();
+      }
+
+      function sendMail() {
+        mailInstance.sendMail();
+      }
+    </script>
+  </body>
+</html>

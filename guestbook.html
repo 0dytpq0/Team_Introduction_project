@@ -13,39 +13,37 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/gestbook.css">
+    <link rel="stylesheet" href="css/guestbook.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div id="gestbook">
+    <div id="guestbook">
         <div class="container">
             <div class="backhome">
-                <span class="material-symbols-outlined">
-                    keyboard_backspace
-                </span>
+                <a href="index.html">
+                    <span class="material-symbols-outlined">
+                        keyboard_backspace
+                    </span>
+                </a>
             </div>
             <div class="title">
-                <p><span>박요셉</span>님을 응원해주세요!</p>
+                <p><span id="membername">박요셉</span>님을 응원해주세요!</p>
             </div>
-            <div class="gestinfo">
-                <input id="nickname" type="text" placeholder="닉네임">
-                <input id="supporttext" type="text" placeholder="응원의 메시지를 남겨주세요">
+            <div class="guestinfo">
+                <input id="nickname" type="text" placeholder="닉네임" maxlength="5">
+                <input id="supporttext" type="text" placeholder="응원의 메시지를 남겨주세요" maxlength="45">
                 <button class="sendinfo">응원하기</button>
             </div>
 
-            <table id="gesthistory">
+            <table id="guesthistory">
                 <tr>
-                    <td>사용자1</td>
-                    <td>파이팅!</td>
-                </tr>
-                <tr>
-                    <td>사용자2</td>
-                    <td>화이팅!</td>
+                    <td id="thankyoutext" style="width:1300px">응원 감사합니다!</td>
                 </tr>
             </table>
         </div>
     </div>
+    <script src="js/guestbook.js"></script>
 </body>
 
 </html>

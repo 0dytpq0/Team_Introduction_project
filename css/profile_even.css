@@ -1,18 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 #profile {
-  --profile-main-color: #9E43FF;
-  --profile-deep-color: #6417C9;
-  --profile-bg-color: #E6D4FF;
-  font-family: "Noto Sans KR", sans-serif;
-  text-align: center;
+  --profile-main-color: #9e43ff;
+  --profile-deep-color: #6417c9;
+  --profile-bg-color: #e6d4ff;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 #profile > .personWrapper {
   display: inline-flex;
   text-align: left;
-}
-#profile > .personWrapper:not(:first-child) {
   padding: 100px 0;
-  border-top: 1px #D9D9D9 solid;
+  border-top: 1px #d9d9d9 solid;
+}
+#profile > .personWrapper:not(:last-child) {
+  border-bottom: 1px #d9d9d9 solid;
 }
 #profile > .personWrapper > .avatar > .imgWrapper {
   background-color: var(--profile-bg-color);
@@ -26,7 +26,9 @@
 #profile > .personWrapper > .avatar > .mbti {
   color: var(--profile-bg-color);
   font-size: 80px;
+  font-weight: bold;
   text-align: center;
+  padding-top: 30px;
 }
 #profile > .personWrapper > .gap {
   width: 150px;
@@ -45,30 +47,43 @@
   font-size: 48px;
   font-weight: bold;
 }
+#profile > .personWrapper > .details > .nameContainer > .tags {
+  padding-left: 15px;
+}
 #profile > .personWrapper > .details > .nameContainer > .tags > .tag {
   background: #333333;
   color: white;
-  padding: 10px 0;
-  min-width: 116px;
+  margin: 0 5px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  min-width: 105px;
+  min-height: 48px;
   border-radius: 24px;
+  font-size: 18px;
   font-weight: bold;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  bottom: 7px;
 }
 #profile > .personWrapper > .details > .address {
   padding: 25px 0;
   font-size: 24px;
 }
 #profile > .personWrapper > .details > .address > a {
-  text-decoration: none;
   color: black;
+  text-decoration: none;
+}
+#profile > .personWrapper > .details > .address > a:hover {
+  text-decoration: underline;
 }
 #profile > .personWrapper > .details > .content {
   width: 820px;
   padding: 45px;
   border: 1px var(--profile-main-color) solid;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 #profile > .personWrapper > .details > .content > .pros,
 #profile > .personWrapper > .details > .content .workingStyle {
@@ -78,7 +93,7 @@
 }
 #profile > .personWrapper > .details > .content > .pros > div,
 #profile > .personWrapper > .details > .content .workingStyle > div {
-  min-height: 150px;
+  min-height: 130px;
 }
 #profile > .personWrapper > .details > .content > .pros > .title,
 #profile > .personWrapper > .details > .content .workingStyle > .title {
@@ -111,4 +126,4 @@
 }
 #profile > .personWrapper > .details > .content > .btnWrapper > button:hover {
   background-color: var(--profile-deep-color);
-}/*# sourceMappingURL=profile.css.map */
+} /*# sourceMappingURL=profile_even.css.map */
