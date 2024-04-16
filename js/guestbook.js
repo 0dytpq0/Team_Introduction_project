@@ -80,14 +80,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
             let editimg = document.querySelectorAll('.editimg');
             editimg.forEach((item, index) => {
                 item.addEventListener('click', () => {
+                    // location.reload();
                     let tr = item.closest('tr');
                     let input = tr.querySelector('.changevalue input');
-                    let currentValue = tr.querySelector('.changevalue').innerHTML;
+                    let currentValue = tr.querySelector('.changevalue').value();
                     if (input) {
                         return
                     }
-                    tr.querySelector('.changevalue').innerHTML = `
-                    <input class='editinvalue' type="text" value="${currentValue}">
+                    tr.querySelector('.changevalue').innerHTML = `<input class='editinvalue' type="text" value="${currentValue}">
                     <button class='completion'>완료</button>`;
 
                     let completionButton = tr.querySelector('.completion');
@@ -96,8 +96,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                         let input = tr.querySelector('.changevalue input');
                         let currentValue = input.value;
                         // 입력 필드로부터 값을 가져와서 수정 셀로 변경
-                        tr.querySelector('.changevalue').innerHTML = `
-            <td class='changevalue'>${currentValue}</td>`;
+                        tr.querySelector('.changevalue').innerHTML = `<td class='changevalue'>${currentValue}</td>`;
                     });
                 })
             })
