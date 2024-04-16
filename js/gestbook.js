@@ -2,7 +2,6 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     const urlParams = new URLSearchParams(window.location.search);
     const from = urlParams.get('from');
-    console.log(from)
 
     let member = ['박요셉', '이성찬', '박하린', '조민수', '김용', '이효현']
 
