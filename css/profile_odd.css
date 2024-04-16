@@ -102,7 +102,7 @@
 
 #profile .keyword {
   display: flex;
-  font-size    : 18px;
+  font-size: 18px;
   height: 35px;
   background-color: #333333;
   color: white;
@@ -112,10 +112,10 @@
   justify-content: center;
   margin-right: 10px;
 
-  box-sizing   : border-box;
-  padding      : 10px 15px;
-  min-width    : 105px;
-  min-height   : 48px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  min-width: 105px;
+  min-height: 48px;
 }
 
 #profile .profile-contact {
@@ -137,6 +137,7 @@
   padding: 45px;
   position: relative;
   width: 820px;
+  box-sizing: border-box;
 }
 
 #profile .attribute {
