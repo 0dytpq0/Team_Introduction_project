@@ -50,10 +50,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     template += `<tr><td>${item.user}</td><td>${item.content}</td>
                         <td>
                         <div>
-                        <img class='removeimg' src="../img/${removeimgname}" alt="remove Image">
+                        <img class='removeimg' src="./img/${removeimgname}" alt="remove Image">
                         </div>
                         <div>
-                        <img class='editimg' src="../img/${edditimgname}" alt="edit Image">
+                        <img class='editimg' src="./img/${edditimgname}" alt="edit Image">
                         </div>
                         </td>
                         </tr>`; // 템플릿 문자열에 데이터 추가
@@ -121,10 +121,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
                         <td class='changevalue'>${item.content}</td>
                         <td>
                         <div>
-                        <img class='removeimg' src="../img/${removeimgname}" alt="remove Image">
+                        <img class='removeimg' src="./img/${removeimgname}" alt="remove Image">
                         </div>
                         <div>
-                        <img class='editimg' src="../img/${edditimgname}" alt="edit Image">
+                        <img class='editimg' src="./img/${edditimgname}" alt="edit Image">
                         </div>
                         </td>
                         </tr>`; // 템플릿 문자열에 데이터 추가
