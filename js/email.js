@@ -1,7 +1,6 @@
 function sendMail() {
   const params = {
-    from_name: document.getElementById("fullName").value,
-    email_id: document.getElementById("email_id").value,
+    to_email: "rkfnahs12e@gmail.com",
     message: document.getElementById("message").value,
   };
   emailjs
