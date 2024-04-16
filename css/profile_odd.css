@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   width: 410px;
-  gap: 60px;
+  gap: 30px;
 }
 
 #profile .leader-wrapper {
@@ -102,17 +102,20 @@
 
 #profile .keyword {
   display: flex;
-  font-size: 16px;
+  font-size    : 18px;
   height: 35px;
   background-color: #333333;
   color: white;
-  padding: 3px 5px;
-  min-width: 80px;
   border-radius: 24px;
   font-weight: bold;
   align-items: center;
   justify-content: center;
   margin-right: 10px;
+
+  box-sizing   : border-box;
+  padding      : 10px 15px;
+  min-width    : 105px;
+  min-height   : 48px;
 }
 
 #profile .profile-contact {
