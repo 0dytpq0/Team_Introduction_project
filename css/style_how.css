@@ -146,7 +146,7 @@ ul {
 }
 
 /*contact style*/
-.contact {
+#contact {
   background-color: #353535;
   .contact_container {
     color: white;
