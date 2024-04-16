@@ -191,6 +191,11 @@ ul {
         color: grey;
         border: none;
         border-radius: 10px;
+        -webkit-appearance: none; /* 크롬 화살표 없애기 */
+        -moz-appearance: none; /* 파이어폭스 화살표 없애기 */
+        appearance: none;
+        background: white url(../img/arrow_down.png) no-repeat 95% 50%;
+        border-radius: 6px;
       }
       p {
         padding-right: 40px;
