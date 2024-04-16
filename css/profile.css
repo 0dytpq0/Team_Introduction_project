@@ -25,6 +25,7 @@
 #profile > .personWrapper > .avatar > .mbti {
   color: var(--profile-bg-color);
   font-size: 80px;
+  font-weight: bold;
   text-align: center;
 }
 #profile > .personWrapper > .gap {
@@ -54,6 +55,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  bottom: 7px;
 }
 #profile > .personWrapper > .details > .address {
   padding: 25px 0;
