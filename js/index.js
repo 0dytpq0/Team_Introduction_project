@@ -10,3 +10,7 @@ window.onload = function () {
     }
   });
 };
+
+function moveCommentPage(name) {
+  location.href = "./guestbook.html?from=" + name;
+}
