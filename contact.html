@@ -136,7 +136,10 @@
         </div>
         <div class="selector">
           <p>메일 받는 사람</p>
-          <select class="selector_box">
+          <select
+            class="selector_box"
+            onchange="mailInstance.getSelectedValue()"
+          >
             <option disabled selected class="selector_first">
               수신자를 선택하세요.
             </option>
@@ -153,9 +156,23 @@
           <textarea id="message" placeholder="내용을 작성해주세요."></textarea>
         </div>
         <div class="button_container">
-          <button onClick="sendMail()">메일 보내기</button>
+          <button onclick="mailInstance.sendMail()">메일 보내기</button>
         </div>
       </div>
     </div>
+
+    <script>
+      // 클래스의 인스턴스를 생성합니다.
+      const mailInstance = new Mail();
+
+      // 클래스의 메소드를 호출합니다.
+      function getSelectedValue() {
+        mailInstance.getSelectedValue();
+      }
+
+      function sendMail() {
+        mailInstance.sendMail();
+      }
+    </script>
   </body>
 </html>
