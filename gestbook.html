@@ -21,12 +21,14 @@
     <div id="gestbook">
         <div class="container">
             <div class="backhome">
-                <span class="material-symbols-outlined">
-                    keyboard_backspace
-                </span>
+                <a href="index.html">
+                    <span class="material-symbols-outlined">
+                        keyboard_backspace
+                    </span>
+                </a>
             </div>
             <div class="title">
-                <p><span>박요셉</span>님을 응원해주세요!</p>
+                <p><span id="membername">박요셉</span>님을 응원해주세요!</p>
             </div>
             <div class="gestinfo">
                 <input id="nickname" type="text" placeholder="닉네임">
@@ -36,16 +38,12 @@
 
             <table id="gesthistory">
                 <tr>
-                    <td>사용자1</td>
-                    <td>파이팅!</td>
-                </tr>
-                <tr>
-                    <td>사용자2</td>
-                    <td>화이팅!</td>
+                    <td id="thankyoutext" style="width:1300px">응원 감사합니다!</td>
                 </tr>
             </table>
         </div>
     </div>
+    <script src="js/gestbook.js"></script>
 </body>
 
 </html>
