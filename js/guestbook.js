@@ -80,7 +80,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             let editimg = document.querySelectorAll('.editimg');
             editimg.forEach((item, index) => {
                 item.addEventListener('click', () => {
-                    location.reload();
                     let tr = item.closest('tr');
                     let input = tr.querySelector('.changevalue input');
                     let currentValue = tr.querySelector('.changevalue').innerHTML;
@@ -169,7 +168,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                             support[index].content = currentValue
                             localStorage.setItem(`supportData${memberindex}`, JSON.stringify(support)); 
                             guestbook(memberindex);
-                            console.log()
+
 
                         });
                     })
