@@ -14,9 +14,15 @@ li, a{text-decoration: none;list-style-type: none;}
 
 /*main*/
 #main{background-color: #f5f5f5;}
-#main .container{width:1380px;padding:120px 0 172px 0;}
+#main .container{width:1380px;margin:0 auto;padding:120px 0 172px 0;}
 #main .title{width: 100%;text-align: center;font-size: 48px;color: #9E43FF;}
 #main .visual{width:100%;margin-top: 124px; text-align: center;}
 
 /*btn_top*/
 #btn_top{position: fixed;bottom:40px; right: 40px;}
+
+/* weather */
+#weather{width: 100px;padding:20px; height:36px;position: fixed;right:0;bottom:200px;background-color: #9E43FF;color:white;}
+#weather ul{display: flex;gap:10px;}
+#weather ul li {display: flex; align-items: center;}
+#weather ul li img {width:24px;height:24px;}

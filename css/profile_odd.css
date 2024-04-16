@@ -13,7 +13,7 @@
   display: flex;
   font-size: 28px;
   font-weight: bold;
-  height: 310px;
+  height: 210px;
   align-items: center;
 }
 
@@ -21,24 +21,24 @@
   display: flex;
   height: 800px;
   width: 100%;
-  padding: 100px 0;
-  border-bottom: 1px #d9d9d9 solid;
+  padding: 60px 0 0 0;
 }
 
 #profile .profile-main {
   display: flex;
   flex-direction: column;
   width: 410px;
-  gap: 60px;
+  gap: 30px;
 }
 
 #profile .leader-wrapper {
   display: flex;
   font-size: 20px;
+  height: 13px;
   background-color: #333333;
   color: white;
   padding: 10px;
-  width: 120px;
+  width: 100px;
   border-radius: 20px;
   font-weight: bold;
   align-items: center;
@@ -69,7 +69,7 @@
 
 #profile .profile-detail {
   display: flex;
-  margin-top: 60px;
+  margin-top: 50px;
   flex-direction: column;
   width: 820px;
   margin-left: 150px;
@@ -96,27 +96,37 @@
 
 #profile .profile-keywords {
   display: flex;
+  align-items: center;
+  margin-top: 8px;
 }
 
 #profile .keyword {
   display: flex;
-  font-size: 20px;
+  font-size    : 18px;
+  height: 35px;
   background-color: #333333;
   color: white;
-  padding: 3px 10px;
-  min-width: 95px;
   border-radius: 24px;
   font-weight: bold;
-  display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 10px;
+
+  box-sizing   : border-box;
+  padding      : 10px 15px;
+  min-width    : 105px;
+  min-height   : 48px;
 }
 
 #profile .profile-contact {
   font-size: 24px;
   margin-bottom: 27px;
   line-height: 150%;
+}
+
+#profile a {
+  text-decoration: none;
+  color: black;
 }
 
 #profile .profile-attributes {
@@ -126,6 +136,7 @@
   border-radius: 10px;
   padding: 45px;
   position: relative;
+  width: 820px;
 }
 
 #profile .attribute {
@@ -138,7 +149,7 @@
   font-weight: bold;
   font-size: 28px;
   color: #9e43ff;
-  min-height: 150px;
+  min-height: 130px;
 }
 
 #profile .attribute-detail {

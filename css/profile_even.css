@@ -8,10 +8,11 @@
 #profile > .personWrapper {
   display: inline-flex;
   text-align: left;
-}
-#profile > .personWrapper:not(:first-child) {
   padding: 100px 0;
   border-top: 1px #D9D9D9 solid;
+}
+#profile > .personWrapper:not(:last-child) {
+  border-bottom: 1px #D9D9D9 solid;
 }
 #profile > .personWrapper > .avatar > .imgWrapper {
   background-color: var(--profile-bg-color);
@@ -27,6 +28,7 @@
   font-size: 80px;
   font-weight: bold;
   text-align: center;
+  padding-top: 30px;
 }
 #profile > .personWrapper > .gap {
   width: 150px;
@@ -45,12 +47,19 @@
   font-size: 48px;
   font-weight: bold;
 }
+#profile > .personWrapper > .details > .nameContainer > .tags {
+  padding-left: 15px;
+}
 #profile > .personWrapper > .details > .nameContainer > .tags > .tag {
   background: #333333;
   color: white;
-  padding: 10px 0;
-  min-width: 116px;
+  margin: 0 5px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  min-width: 105px;
+  min-height: 48px;
   border-radius: 24px;
+  font-size: 18px;
   font-weight: bold;
   display: inline-flex;
   align-items: center;
@@ -80,7 +89,7 @@
 }
 #profile > .personWrapper > .details > .content > .pros > div,
 #profile > .personWrapper > .details > .content .workingStyle > div {
-  min-height: 150px;
+  min-height: 130px;
 }
 #profile > .personWrapper > .details > .content > .pros > .title,
 #profile > .personWrapper > .details > .content .workingStyle > .title {
@@ -113,4 +122,4 @@
 }
 #profile > .personWrapper > .details > .content > .btnWrapper > button:hover {
   background-color: var(--profile-deep-color);
-}/*# sourceMappingURL=profile.css.map */
+}/*# sourceMappingURL=profile_even.css.map */

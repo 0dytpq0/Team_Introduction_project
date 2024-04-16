@@ -1,9 +1,9 @@
-<link rel="stylesheet" href="./css/profile.css">
-<link rel="stylesheet" href="./css/profile1.css" />
+<link rel="stylesheet" href="./css/profile_odd.css">
+<link rel="stylesheet" href="./css/profile_even.css" />
 
 <div id="profile">
     <div class="section-header">
-        <h1 class="section-title">Our Profile</h1>
+        <h2 class="section-title">Our Profile</h1>
     </div>
     <div class="profile-card-wrapper">
         <div class="profile-main">
@@ -30,9 +30,9 @@
                 </div>
             </div>
             <div class="profile-contact">
-                <p>E-mail : rkfnahs12e@gmail.com</a></p>
-                <p>BLOG : https://velog.io/@0dytpq0</a></p>
-                <p>GITHUB : https://github.com/0dytpq0</a></p>
+                E-mail : rkfnahs12e@gmail.com
+                <br>BLOG : <a href="https://velog.io/@0dytpq0" target="_blank">https://velog.io/@0dytpq0</a>
+                <br>GITHUB : <a href="https://github.com/0dytpq0" target="_blank">https://github.com/0dytpq0</a>
             </div>
             <div class="profile-attributes">
                 <div class="attribute">
@@ -120,9 +120,9 @@
                 </div>
             </div>
             <div class="profile-contact">
-                <p>E-mail : harinpark4420@gmail.com</a></p>
-                <p>BLOG : https://velog.io/@harinpark00</a></p>
-                <p>GITHUB : https://github.com/harinpark00</a></p>
+                E-mail : harinpark4420@gmail.com
+                <br>BLOG : <a href="https://velog.io/@harinpark00" target="_blank">https://velog.io/@harinpark00</a>
+                <br>GITHUB : <a href="https://github.com/harinpark00" target="_blank">https://github.com/harinpark00</a>
             </div>
             <div class="profile-attributes">
                 <div class="attribute">
@@ -214,9 +214,9 @@
                 </div>
             </div>
             <div class="profile-contact">
-                <p>E-mail : right4570@naver.com</a></p>
-                <p>BLOG : https://rex-0521.tistory.com</a></p>
-                <p>GITHUB : https://github.com/R-KIMYONG</a></p>
+                E-mail : right4570@naver.com
+                <br>BLOG : <a href="https://rex-0521.tistory.com" target="_blank"> https://rex-0521.tistory.com</a>
+                <br>GITHUB : <a href="https://github.com/R-KIMYONG" target="_blank"> https://github.com/R-KIMYONG</a>
             </div>
             <div class="profile-attributes">
                 <div class="attribute">
@@ -242,7 +242,6 @@
         </div>
     </div>
     <div class="personWrapper">
-
         <div class="details">
             <div class="catchPhrase">“좋아 할 수 있어”</div>
             <div class="nameContainer">
@@ -271,7 +270,7 @@
                         <br>말을 곡해하지 않고 본질에 다가가려 노력해요.
                     </div>
                 </div>
-                <div class="btnWrapper"><button>응원 남기기</button></div>
+                <div class="btnWrapper"><button onclick="moveCommentPage()">응원 남기기</button></div>
             </div>
         </div>
         <div class="gap"></div>
@@ -283,3 +282,9 @@
         </div>
     </div>
 </div>
+
+<script>
+    function moveCommentPage() {
+        location.href = './gestbook.html';
+    }
+</script>
