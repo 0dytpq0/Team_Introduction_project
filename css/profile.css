@@ -1,3 +1,114 @@
-#profile > .personWrapper {
-    color : red;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+#profile {
+  --profile-main-color: #9E43FF;
+  --profile-deep-color: #6417C9;
+  --profile-bg-color: #E6D4FF;
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
 }
+#profile > .personWrapper {
+  display: inline-flex;
+  text-align: left;
+}
+#profile > .personWrapper:not(:first-child) {
+  padding: 100px 0;
+  border-top: 1px #D9D9D9 solid;
+}
+#profile > .personWrapper > .avatar > .imgWrapper {
+  background-color: var(--profile-bg-color);
+  border-radius: 100%;
+  width: 410px;
+  height: 410px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#profile > .personWrapper > .avatar > .mbti {
+  color: var(--profile-bg-color);
+  font-size: 80px;
+  text-align: center;
+}
+#profile > .personWrapper > .gap {
+  width: 150px;
+}
+#profile > .personWrapper > .details > .catchPhrase {
+  color: var(--profile-deep-color);
+  font-size: 28px;
+  font-weight: bold;
+}
+#profile > .personWrapper > .details > .nameContainer {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+}
+#profile > .personWrapper > .details > .nameContainer > .name {
+  font-size: 48px;
+  font-weight: bold;
+}
+#profile > .personWrapper > .details > .nameContainer > .tags > .tag {
+  background: #333333;
+  color: white;
+  padding: 10px 0;
+  min-width: 116px;
+  border-radius: 24px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+#profile > .personWrapper > .details > .address {
+  padding: 25px 0;
+  font-size: 24px;
+}
+#profile > .personWrapper > .details > .address > a {
+  text-decoration: none;
+  color: black;
+}
+#profile > .personWrapper > .details > .content {
+  width: 820px;
+  padding: 45px;
+  border: 1px var(--profile-main-color) solid;
+  border-radius: 10px;
+}
+#profile > .personWrapper > .details > .content > .pros,
+#profile > .personWrapper > .details > .content .workingStyle {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  align-items: center;
+}
+#profile > .personWrapper > .details > .content > .pros > div,
+#profile > .personWrapper > .details > .content .workingStyle > div {
+  min-height: 150px;
+}
+#profile > .personWrapper > .details > .content > .pros > .title,
+#profile > .personWrapper > .details > .content .workingStyle > .title {
+  color: var(--profile-main-color);
+  font-size: 28px;
+  font-weight: bold;
+}
+#profile > .personWrapper > .details > .content > .pros > .desc,
+#profile > .personWrapper > .details > .content .workingStyle > .desc {
+  font-size: 24px;
+}
+#profile > .personWrapper > .details > .content > .btnWrapper {
+  height: 0px;
+  text-align: right;
+}
+#profile > .personWrapper > .details > .content > .btnWrapper > button {
+  position: relative;
+  top: 15px;
+  width: 256px;
+  height: 60px;
+  padding: 12px 32px;
+  text-align: right;
+  color: white;
+  background-color: var(--profile-main-color);
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#profile > .personWrapper > .details > .content > .btnWrapper > button:hover {
+  background-color: var(--profile-deep-color);
+}/*# sourceMappingURL=profile.css.map */
