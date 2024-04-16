@@ -12,5 +12,5 @@ window.onload = function () {
 };
 
 function moveCommentPage(name) {
-  location.href = "./gestbook.html?from=" + name;
+  location.href = "./guestbook.html?from=" + name;
 }

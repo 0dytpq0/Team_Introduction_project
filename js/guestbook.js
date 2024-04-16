@@ -7,26 +7,25 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     switch (from) {
         case '박요셉':
-            gestbook(0)
+            guestbook(0)
             break
         case '이성찬':
-            gestbook(1)
+            guestbook(1)
             break
         case '박하린':
-            gestbook(2)
+            guestbook(2)
             break
         case '조민수':
-            gestbook(3)
+            guestbook(3)
             break
         case '김용':
-            gestbook(4)
+            guestbook(4)
             break
         case '이효현':
-            gestbook(5)
+            guestbook(5)
             break
     }
-
-    function gestbook(memberindex) {
+    function guestbook(memberindex) {
 
         document.getElementById('membername').innerHTML = ''
         document.getElementById('membername').innerHTML = `${member[memberindex]}`
@@ -41,7 +40,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             support.push(arr);//object자료를 어레이에 넣는다.
 
             localStorage.setItem(`supportData${memberindex}`, JSON.stringify(support)); // 로컬 스토리지에 데이터 저장
-            let board = document.getElementById('gesthistory');
+            let board = document.getElementById('guesthistory');
 
             let data = JSON.parse(localStorage.getItem(`supportData${memberindex}`)); // supportData 가져오기
             let template = ''; // 템플릿 문자열 초기화
@@ -55,7 +54,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             let supportData = localStorage.getItem(`supportData${memberindex}`);
             if (supportData) {  //로컬스토리지에 supportData가 있으면 아래코드실행
                 support = JSON.parse(supportData);
-                let board = document.getElementById('gesthistory');
+                let board = document.getElementById('guesthistory');
                 let template = ''
                 support.forEach(item => {
                     template += `<tr><td>${item.user}</td><td>${item.content}</td></tr>`; // 템플릿 문자열에 데이터 추가
