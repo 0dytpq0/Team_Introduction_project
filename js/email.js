@@ -10,7 +10,7 @@ class Mail {
       박요셉: "rkfnahs12e@gmail.com",
       박하린: "rkfnahs12e@gmail.com",
       이성찬: "rkfnahs12e@gmail.com",
-      조수민: "rkfnahs12e@gmail.com",
+      조민수: "textign@gmail.com",
       김용: "0dytpq0@naver.com",
       이효현: "rkfnahs12e@gmail.com",
     };
