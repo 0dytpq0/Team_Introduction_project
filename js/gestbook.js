@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             break
         case '이효현':
             gestbook(5)
-            breakZ
+            break
     }
 
     function gestbook(memberindex) {
