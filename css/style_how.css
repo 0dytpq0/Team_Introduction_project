@@ -12,21 +12,21 @@ ul {
   margin: 0 auto;
 }
 
-#what_we_do {
+#who_we_are {
   background-color: black;
   color: white;
   text-align: center;
   padding: 70px 0;
 }
 
-#what_we_do h2 {
+#who_we_are h2 {
   font-size: 60px;
   background: linear-gradient(to right, #ff7979, #9e43ff);
   color: transparent;
   -webkit-background-clip: text;
 }
 
-#what_we_do p {
+#who_we_are p {
   font-size: 24px;
   padding-top: 15px;
   line-height: 1.4;
