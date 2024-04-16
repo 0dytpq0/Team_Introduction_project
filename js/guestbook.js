@@ -43,6 +43,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             let board = document.getElementById('guesthistory');
 
             let data = JSON.parse(localStorage.getItem(`supportData${memberindex}`)); // supportData 가져오기
+            location.reload();
             if (data.length > 0) {
                 let template = ''; // 템플릿 문자열 초기화
                 let [removeimgname, edditimgname] = ['remove.png', 'edit.png']
