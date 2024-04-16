@@ -83,12 +83,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     // location.reload();
                     let tr = item.closest('tr');
                     let input = tr.querySelector('.changevalue input');
-                    let currentValue = tr.querySelector('.changevalue').value();
+                    let currentValue = tr.querySelector('.changevalue').innerHTML;
+                    tr.querySelector('.changevalue').innerHTML = `<input class='editinvalue' type="text" value="${currentValue}">
+                    <button class='completion'>완료</button>`;
                     if (input) {
                         return
                     }
-                    tr.querySelector('.changevalue').innerHTML = `<input class='editinvalue' type="text" value="${currentValue}">
-                    <button class='completion'>완료</button>`;
+                    
 
                     let completionButton = tr.querySelector('.completion');
                     completionButton.addEventListener('click', () => {
