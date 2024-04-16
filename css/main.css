@@ -20,3 +20,8 @@ li, a{text-decoration: none;list-style-type: none;}
 
 /*btn_top*/
 #btn_top{position: fixed;bottom:40px; right: 40px;}
+
+/* weather */
+#weather{width: 100px;padding:20px; height:36px;position: fixed;right:0;bottom:200px;background-color: #9E43FF;color:white;}
+#weather ul{overflow: hidden;}
+#weather ul li{float: left;}
