@@ -89,6 +89,51 @@
   background-color: #ead3ff;
 }
 
+
+/* about our team */
+#about .title{
+  width:1380px;
+  margin:0 auto;
+  padding:62px 0;
+  color: white;
+}
+
+#about .title h2{
+  font-size: 48px;
+}
+
+#about .title h2 span{
+  font-size: 28px;
+  margin-left:40px;
+}
+
+#about .cont{
+  overflow: hidden;
+  width:1380px;
+  margin:0 auto;
+  padding:100px 0;
+}
+
+#about .cont .left{
+ font-size: 52px;
+ color: #9E43FF;
+ float: left;
+}
+
+#about .cont .left p{
+  font-size: 200px;
+  color: white;
+  font-weight: bold;
+  margin-top: 200px;
+}
+
+#about .cont .right{
+  float: right;
+  margin-top:162px
+ }
+
+
+
 /*contact style*/
 #contact {
   background-color: #353535;
