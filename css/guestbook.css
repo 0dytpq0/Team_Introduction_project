@@ -152,7 +152,52 @@
 }
 
 #guesthistory tr td:nth-of-type(2) {
-    width: 1148px;
+    width: 997px;
     padding-left: 24px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#guesthistory tr td:nth-of-type(3) {
+    width: 131px;
+    padding-left: 24px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#guesthistory tr td:nth-of-type(3)>div {
+    width: 42px;
+    height: 42px;
+    position: relative;
+}
+
+#guesthistory tr td:nth-of-type(3)>div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+#guestbook .editinvalue {
+    width: 880px;
+    padding-left: 24px;
+    box-sizing: border-box;
+    font-size: 32px;
+    padding-left: 0px;
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+
+#guestbook .completion {
+    background: #9E43FF;
+    color: #fff;
+    width: 87px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 22px;
 }
