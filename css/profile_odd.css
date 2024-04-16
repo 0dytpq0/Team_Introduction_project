@@ -13,7 +13,7 @@
   display: flex;
   font-size: 28px;
   font-weight: bold;
-  height: 310px;
+  height: 210px;
   align-items: center;
 }
 
@@ -21,8 +21,7 @@
   display: flex;
   height: 800px;
   width: 100%;
-  padding: 100px 0;
-  border-bottom: 1px #d9d9d9 solid;
+  padding: 60px 0 0 0;
 }
 
 #profile .profile-main {
@@ -70,7 +69,7 @@
 
 #profile .profile-detail {
   display: flex;
-  margin-top: 60px;
+  margin-top: 50px;
   flex-direction: column;
   width: 820px;
   margin-left: 150px;
@@ -103,7 +102,7 @@
 
 #profile .keyword {
   display: flex;
-  font-size: 15px;
+  font-size: 16px;
   height: 35px;
   background-color: #333333;
   color: white;
@@ -134,6 +133,7 @@
   border-radius: 10px;
   padding: 45px;
   position: relative;
+  width: 820px;
 }
 
 #profile .attribute {
@@ -146,7 +146,7 @@
   font-weight: bold;
   font-size: 28px;
   color: #9e43ff;
-  min-height: 150px;
+  min-height: 130px;
 }
 
 #profile .attribute-detail {
