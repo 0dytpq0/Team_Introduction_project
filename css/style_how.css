@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
 }
+#container {
+  width: 1380px;
+  margin: 0 auto;
+}
+
 #what_we_do {
   background-color: black;
   color: white;
@@ -31,8 +36,6 @@
 .section_ttl {
   display: flex;
   align-items: center;
-  width: 1380px;
-  margin: 0 auto;
 }
 
 #how_we_work h2 {
@@ -77,19 +80,19 @@
   margin-right: 0;
 }
 
-#about > div:first-child {
+.goal {
   background-color: #9e43ff;
 }
 
-#about > div:nth-child(2) {
+.about_li1 {
   background-color: #f5f0fb;
 }
 
-#about > div:nth-child(3) {
+.about_li2 {
   background-color: #f2e6fd;
 }
 
-#about > div:last-child {
+.about_li3 {
   background-color: #ead3ff;
 }
 
