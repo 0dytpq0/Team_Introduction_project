@@ -9,14 +9,20 @@ function onGeoOk(position){
   fetch(url).then(response => response.json()).then(data => {
     const locationContainer = document.querySelector('#weather .location');
     const tempContainer = document.querySelector('#weather .temp');
+    const iconImg = document.querySelector('#weather .icon img');
 
-    locationContainer.innerText = `${data.name}`;
-    tempContainer.innerText = `: ${data.main.temp.toFixed(0)}°`;
-    
+    //locationContainer.innerText = `${data.name}`;
+    tempContainer.innerText = `${data.main.temp.toFixed(0)}°`;
+    const iconCode = data.weather[0].icon;
+    var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+    iconImg.src = iconUrl;
+
   });
 
 }
 function onGeoError(){
   alert("날씨 정보를 받을 수 없습니다.");
 }
-navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError)
+
+navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+
