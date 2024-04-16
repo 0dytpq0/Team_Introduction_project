@@ -148,8 +148,7 @@ ul {
 #contact {
   background-color: #353535;
   color: white;
-  width: 1380px;
-  height: 100%;
+  height: 1183px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -187,13 +186,15 @@ ul {
       text-align: center;
       font-size: 24px;
       color: grey;
+      border: none;
+      border-radius: 10px;
     }
     p {
       padding-right: 40px;
       font-size: 28px;
       font-weight: bold;
     }
-    #first {
+    #selector_first {
       display: none;
       color: #a7a7a7;
     }
@@ -209,11 +210,12 @@ ul {
       margin-bottom: 15px;
     }
     textarea {
-      width: 1258px;
       height: 316px;
       padding: 30px;
       font-size: 24px;
       color: #a7a7a7;
+      border: none;
+      border-radius: 10px;
     }
   }
   #button_container {
@@ -226,10 +228,11 @@ ul {
       width: 190px;
       height: 60px;
       background-color: #9e43ff;
-      border-radius: 10px;
       font-size: 24px;
       font-weight: bold;
       color: white;
+      border: none;
+      border-radius: 10px;
     }
 
     button:hover {
