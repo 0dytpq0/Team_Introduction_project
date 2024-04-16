@@ -79,6 +79,7 @@ ul {
 
 .emoji {
   margin: -20px 0 20px 0;
+  font-size: 36px;
 }
 
 #how_we_work ul > li:last-child {
