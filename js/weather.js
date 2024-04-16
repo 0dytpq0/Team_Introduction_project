@@ -12,7 +12,7 @@ function onGeoOk(position){
     const iconImg = document.querySelector('#weather .icon img');
 
     //locationContainer.innerText = `${data.name}`;
-    tempContainer.innerText = `${data.main.temp.toFixed(0)}°`;
+    tempContainer.innerText = `${data.main.temp.toFixed(0)}℃`;
     const iconCode = data.weather[0].icon;
     var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
     iconImg.src = iconUrl;
