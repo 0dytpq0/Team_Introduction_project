@@ -4,7 +4,6 @@
   --profile-deep-color: #6417C9;
   --profile-bg-color: #E6D4FF;
   font-family: "Noto Sans KR", sans-serif;
-  text-align: center;
 }
 #profile > .personWrapper {
   display: inline-flex;
