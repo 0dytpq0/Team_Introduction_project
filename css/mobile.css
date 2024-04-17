@@ -71,6 +71,12 @@
   #profile .section-header > h2.section-title {
     font-size: 1em;
   }
+  #profile .profile-card-wrapper .profile-photo-wrapper {
+    width: 90vw;
+    height: 90vw;
+    max-width: 410px;
+    max-height: 410px;
+  }
   #profile .profile-card-wrapper .profile-photo-wrapper img {
     width: 45vw;
     max-width: 200px;
@@ -110,6 +116,12 @@
     text-align: center;
     font-size: 1.3em;
     padding: 10px 25px;
+  }
+  #profile > .personWrapper > .avatar > .imgWrapper {
+    width: 90vw;
+    height: 90vw;
+    max-width: 330px;
+    max-height: 330px;
   }
   #profile > .personWrapper > .avatar > .imgWrapper > img {
     width: 45vw;

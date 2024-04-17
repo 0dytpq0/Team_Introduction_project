@@ -23,12 +23,8 @@
 #profile > .personWrapper > .avatar > .imgWrapper {
   background-color: var(--profile-bg-color);
   border-radius: 100%;
-  width: 30vw;
-  height: 30vw;
-  min-width: 320px;
-  min-height: 320px;
-  max-width: 410px;
-  max-height: 410px;
+  width: 410px;
+  height: 410px;
   margin: auto;
   display: flex;
   align-items: center;

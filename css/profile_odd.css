@@ -49,12 +49,8 @@
   justify-content: center;
   background-color: #e6d4ff;
 
-  width     : 30vw;
-  height    : 30vw;
-  min-width : 320px;
-  min-height: 320px;
-  max-width : 410px;
-  max-height: 410px;
+  width : 410px;
+  height: 410px;
   
   margin: auto;
 
