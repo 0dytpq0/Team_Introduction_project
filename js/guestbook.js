@@ -107,6 +107,9 @@ window.addEventListener("DOMContentLoaded", () => {
         `supportData${memberindex}`,
         JSON.stringify(support)
       );
+
+      document.getElementById("nickname").value = "";
+      document.getElementById("supporttext").value = "";
       renderGuestbook();
     });
   };
@@ -115,7 +118,4 @@ window.addEventListener("DOMContentLoaded", () => {
   if (memberIndex !== -1) {
     guestbook(memberIndex);
   }
-
 });
-
-
