@@ -133,6 +133,7 @@
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
+  box-sizing: border-box;
 }
 #profile > .personWrapper > .details > .content > .btnWrapper > button:hover {
   background-color: var(--profile-deep-color);

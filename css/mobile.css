@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/* for mobile */
+@media (max-width: 1000px) {
+  #header > .container > .gnb,
+  #weather,
+  #about > .cont_box > .cont > .right,
+  #how_we_work > .container > .section_ttl > h3,
+  #about .cont .left p,
+  #about .title h2 span,
+  #contact .contact_container .headline p {
+    display: none;
+  }
+  #main .container {
+    padding: 80px 0 80px 0;
+  }
+  #main .title {
+    width: 85%;
+    font-size: 1.8em;
+    margin: auto;
+  }
+  #header .container {
+    width: 95%;
+    padding: 0 0.3em;
+    box-sizing: border-box;
+  }
+  #header .logo a img {
+    width: 63%;
+  }
+  #header #main .container {
+    width: 100%;
+  }
+  #who_we_are h2 {
+    font-size: 1.8em;
+  }
+  #who_we_are p {
+    font-size: 1.4em;
+    padding-top: 25px;
+  }
+  #how_we_work {
+    padding-top: 40px;
+  }
+  #how_we_work .ul {
+    flex-direction: column;
+    margin: 0;
+    padding-top: 4em;
+  }
+  #how_we_work > .container {
+    width: 90vw;
+    margin: auto;
+  }
+  #how_we_work > .container > .section_ttl h2 {
+    font-size: 1.5em;
+  }
+  #about .title {
+    padding: 1em;
+  }
+  #about .title > h2 {
+    font-size: 1.8em;
+  }
+  #about .cont_box .cont {
+    padding: 50px 0;
+  }
+  #about .cont_box .cont .left {
+    font-size: 1.7em;
+  }
+  #profile .profile-card-wrapper .section-header {
+    height: 100px;
+    line-height: 100px;
+    text-align: left;
+  }
+  #profile .profile-card-wrapper .section-header > h2.section-title {
+    font-size: 1em;
+  }
+  #profile .profile-card-wrapper .profile-photo-wrapper img {
+    width: 45vw;
+    max-width: 200px;
+    max-height: 233px;
+  }
+  #profile .profile-card-wrapper .profile-mbti {
+    font-size: 4em;
+  }
+  #profile .profile-card-wrapper .profile-detail .profile-quote {
+    font-size: 1.4em;
+    margin-bottom: 0;
+  }
+  #profile .profile-card-wrapper .profile-detail .profile-name-wrapper .profile-name {
+    margin-bottom: 30px;
+    font-size: 3.5em;
+  }
+  #profile .profile-card-wrapper .profile-detail .profile-name-wrapper .profile-keywords > .keyword {
+    font-size: 0.9em;
+    min-width: 75px;
+    min-height: 30px;
+    margin: 0 3px;
+  }
+  #profile .profile-card-wrapper .profile-detail .profile-contact {
+    font-size: 1.1em;
+  }
+  #profile .profile-card-wrapper .profile-detail .profile-attributes {
+    padding: 1em;
+  }
+  #profile .profile-card-wrapper .profile-detail .profile-attributes .attribute {
+    grid-template-columns: 1fr 2fr;
+  }
+  #profile .profile-card-wrapper .profile-detail .profile-attributes .attribute .attribute-title,
+  #profile .profile-card-wrapper .profile-detail .profile-attributes .attribute .attribute-detail {
+    font-size: 0.7em;
+  }
+  #profile .profile-card-wrapper .profile-detail .profile-attributes button.btn-cheering {
+    text-align: center;
+    font-size: 1.3em;
+    padding: 10px 25px;
+  }
+  #profile > .personWrapper > .avatar > .imgWrapper > img {
+    width: 45vw;
+    max-width: 200px;
+    max-height: 233px;
+  }
+  #profile > .personWrapper > .avatar > .mbti {
+    font-size: 4em;
+  }
+  #profile > .personWrapper > .details > .catchPhrase {
+    font-size: 1.4em;
+    margin-bottom: 0;
+  }
+  #profile > .personWrapper > .details .nameContainer > .name {
+    margin-bottom: 30px;
+    font-size: 3.5em;
+  }
+  #profile > .personWrapper > .details .nameContainer > .tags > .tag {
+    font-size: 0.9em;
+    min-width: 75px;
+    min-height: 30px;
+    margin: 0 3px;
+  }
+  #profile > .personWrapper > .details > .address {
+    font-size: 1.1em;
+  }
+  #profile > .personWrapper > .details > .content {
+    grid-template-columns: 1fr 2fr;
+    padding: 1em;
+  }
+  #profile > .personWrapper > .details > .content > .pros > .title,
+  #profile > .personWrapper > .details > .content > .pros > .desc,
+  #profile > .personWrapper > .details > .content > .workingStyle > .title,
+  #profile > .personWrapper > .details > .content > .workingStyle > .desc {
+    font-size: 1em;
+  }
+  #profile > .personWrapper > .details > .content > .btnWrapper {
+    text-align: center;
+  }
+  #profile > .personWrapper > .details > .content > .btnWrapper > button {
+    font-size: 1.2em;
+    text-align: center;
+    top: 28px;
+    padding: 10px 25px;
+  }
+  #contact .contact_container .headline {
+    margin: 20px 33px;
+  }
+  #contact .contact_container .headline h1 {
+    height: auto;
+    font-size: 1.8em;
+  }
+  #contact .contact_container .selector,
+  #contact .contact_container .text {
+    align-items: inherit;
+    flex-direction: column;
+  }
+  #contact .contact_container .selector p,
+  #contact .contact_container .text p {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  #contact .contact_container .selector select,
+  #contact .contact_container .text select {
+    height: 10vw;
+    width: 60vw;
+    font-size: 1.1em;
+    text-align: left;
+    padding: 0 1em;
+  }
+  #contact .contact_container .selector textarea,
+  #contact .contact_container .text textarea {
+    font-size: 1.1em;
+    padding: 20px;
+  }
+  #contact .contact_container .button_container button {
+    min-width: 90px;
+    min-height: 32px;
+    width: 20wv;
+    font-size: 1em;
+  }
+}
+/* 다음엔 바디 사이즈랑 내부 최대 사이즈 정해놓고 가면 이렇게 한땀한땀 안 만들어도 될 듯*/
+@media (min-width: 1480px) {
+  #header .container,
+  #main .visual img,
+  #how_we_work > #container,
+  #about .title,
+  #about .cont_box .cont,
+  #contact .contact_container {
+    max-width: 1380px;
+    margin: auto;
+  }
+}/*# sourceMappingURL=mobile.css.map */
