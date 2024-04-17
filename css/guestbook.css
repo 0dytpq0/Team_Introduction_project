@@ -10,9 +10,7 @@
 }
 
 #guestbook .container {
-    width: 1380px;
-    height: 1000px;
-    ;
+    max-width: 1380px;
     margin: 0px auto;
 }
 
@@ -65,7 +63,7 @@
 
 
 #guestbook .guestinfo {
-    width: 1380px;
+    max-width: 1380px;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -136,7 +134,8 @@
 /* 응원자 닉네임과 응원글 input */
 
 #guesthistory {
-    width: 1380px;
+    max-width: 1380px;
+    width: 100%;
     border-top: 5px solid #9E43FF;
     border-bottom: 5px solid #9E43FF;
     box-sizing: border-box;
@@ -145,7 +144,7 @@
 }
 
 #guesthistory tr {
-    width: 1380px;
+    max-width: 1380px;
     height: 80px;
     border-bottom: 1px solid #A7A7A7;
     padding: 0px;
@@ -165,11 +164,15 @@
 }
 
 #guesthistory tr td:nth-of-type(1) {
-    width: 212px;
+    width: 5em;
     padding-left: 30px;
     box-sizing: border-box;
     color: #9E43FF;
     font-weight: bold
+}
+
+#guesthistory tr td#thankyoutext {
+    width: 100%;
 }
 
 #guesthistory tr td:nth-of-type(2) {
@@ -230,4 +233,104 @@
     font-size: 22px;
     border: none;
     cursor: pointer;
+}
+
+#guestbookc .thankyoutext {
+    width: 100%;
+}
+
+@media (max-width: 1380px) {
+    #guestbook .container,
+    #guestbook .guestinfo,
+    #guesthistory,
+    #guesthistory tr,
+    #guestbook #supporttext  {
+        width: 85vw;
+    }
+    #guestbook {
+        margin: 50px 0 0 0;
+
+        .backhome {
+            width : 55px;
+            height : 55px;
+        }
+
+        .title {
+            font-size : 1.8em;
+            margin-top: 25px;
+        }
+        
+        .guestinfo {
+            flex-direction: column;
+            align-items: flex-start;
+
+            height: auto;
+            margin: 0;
+            padding: 30px 0;
+
+            input::placeholder {
+                font-size : 0.6em;
+            }
+            > * {
+                margin: 7px 0;
+            }
+        }
+        
+        #nickname {
+            width: 4em;
+        }
+
+        #nickname, #supporttext {
+            height: 1.5em;
+            box-sizing: border-box;
+            padding: 0 15px;
+            border-width: 1.5px;
+            border-radius: 10px;
+        }
+        .sendinfo {
+            font-size : 1.3em;
+            width: 6em;
+            height : 2.3em;
+        }
+
+        tr {
+            height: auto;
+
+            td {
+                font-size: 1em;
+                height: auto;
+                line-height: inherit;
+                text-overflow: ellipsis;
+            }
+
+            td:nth-of-type(1) {
+                width: 20%;
+                padding: 5px 0;
+            }
+            
+            td:nth-of-type(2) {
+                width: 60%;
+                
+            }
+            
+            td:nth-of-type(3) {
+                width: 20%;
+                padding :0;
+            }
+        }
+        
+        .editinvalue {
+            font-size: 1em;
+            text-indent: 3px;
+            width : 100%;
+            border-radius: 4px;
+        }
+        .completion {
+            font-size : 1em;
+            width: 4em;
+            height: auto;
+            padding: 10px 5px;
+            margin-left: 2px;
+        }
+    }
 }
