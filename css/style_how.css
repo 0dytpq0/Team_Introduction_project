@@ -1,14 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 ul {
   list-style-type: none;
 }
 
-#container {
-  width: 1380px;
+#who_we_are > #container {
+  width: 95vw;
   margin: 0 auto;
 }
 
@@ -36,12 +31,7 @@ ul {
   background-color: #e6d4ff;
   padding: 70px 0;
   color: #9e43ff;
-  height: 550px;
-}
-
-.section_ttl {
-  display: flex;
-  align-items: center;
+  /* height: 550px; */
 }
 
 #how_we_work h2 {
@@ -56,17 +46,17 @@ ul {
   display: inline;
 }
 
-#how_we_work ul {
+#how_we_work .ul {
   color: black;
   font-size: 21px;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   text-align: center;
   margin: 75px 0 100px 0;
 }
 
-#how_we_work ul > li {
+#how_we_work .ul > .li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +65,7 @@ ul {
   height: 330px;
 }
 
-#how_we_work ul > li > div {
+#how_we_work .ul > .li > div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,7 +77,7 @@ ul {
   line-height: 1.3;
 }
 
-#how_we_work ul > li > div:hover {
+#how_we_work .ul > .li > div:hover {
   width: 320px;
   height: 320px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -96,7 +86,7 @@ ul {
   transition: all 0.5s ease;
 }
 
-#how_we_work ul > li:last-child {
+#how_we_work .ul > .li:last-child {
   margin-right: 0;
 }
 
@@ -123,7 +113,7 @@ ul {
 
 /* about our team */
 #about .title {
-  width: 1380px;
+  width: 90vw;
   margin: 0 auto;
   padding: 62px 0;
   color: white;
@@ -141,7 +131,9 @@ ul {
 
 #about .cont {
   overflow: hidden;
-  width: 1380px;
+  width: 90vw;
+  height: 40vw;
+  max-height: 638px;
   margin: 0 auto;
   padding: 100px 0;
 }
@@ -169,8 +161,9 @@ ul {
   background-color: #353535;
   .contact_container {
     color: white;
-    width: 1380px;
-    height: 1183px;
+    width: 100%;
+    height: 100%;
+    max-height: 1183px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;

@@ -13,7 +13,7 @@ html {
 
 /*header*/
 #header{padding: 25px 0;background-color: #f5f5f5;border-bottom: 1px solid #9E43FF;}
-#header .container{overflow: hidden;width: 1380px;margin: 0 auto;}
+#header .container{overflow: hidden;width: 95vw; margin: 0 auto;}
 #header .logo{float: left;width: 325px;}
 #header .logo a{display: block;}
 #header .logo a img{width: 100%;}
@@ -24,9 +24,10 @@ html {
 
 /*main*/
 #main{background-color: #f5f5f5;}
-#main .container{width:1380px;margin:0 auto;padding:120px 0 172px 0;}
+#main .container{width:100%;margin:0 auto;padding:120px 0 172px 0;}
 #main .title{width: 100%;text-align: center;font-size: 48px;color: #9E43FF;}
 #main .visual{width:100%;margin-top: 124px; text-align: center;}
+#main .visual img { width : 95%; }
 
 /*btn_top*/
 #btn_top{position: fixed;bottom:40px; right: 40px;cursor: pointer;}
@@ -36,3 +37,42 @@ html {
 #weather ul{display: flex;gap:10px;}
 #weather ul li {display: flex; align-items: center;}
 #weather ul li img {width:24px;height:24px;}
+
+/* for mobile */
+@media (max-width:1000px) {
+  #header > .container > .gnb, 
+  #weather, 
+  #about > .cont_box > .cont > .right,
+  #about .cont .left p {
+    display: none;
+  }
+  #header .container{
+    width : 95%;
+    padding: 0 60px; 
+    box-sizing: border-box;
+  }
+  #main .container{
+    width : 100%;
+  }
+  #how_we_work .ul {
+    flex-direction: column;
+  }
+
+  #how_we_work > #container {
+    width : 90vw;
+    margin: auto;
+  }
+}
+
+/* 다음엔 바디 사이즈랑 내부 최대 사이즈 정해놓고 가면 이렇게 한땀한땀 안 만들어도 될 듯*/
+@media (min-width:1480px) {
+  #header .container,
+  #main .visual img,
+  #how_we_work > #container,
+  #about .title,
+  #about .cont_box .cont,
+  #contact .contact_container {
+    max-width: 1380px;
+    margin : auto;
+  }
+}

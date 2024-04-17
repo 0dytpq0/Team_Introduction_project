@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 #profile {
   max-width: 1380px;
   margin: 0 auto;
@@ -10,24 +5,22 @@
 }
 
 #profile .section-header {
-  display: flex;
   font-size: 28px;
   font-weight: bold;
   height: 210px;
-  align-items: center;
+  line-height:210px;
 }
 
 #profile .profile-card-wrapper {
   display: flex;
-  height: 800px;
+  flex-direction: row;
   width: 100%;
-  padding: 60px 0 0 0;
+  padding: 60px 0 100px 0;
 }
 
 #profile .profile-main {
   display: flex;
   flex-direction: column;
-  width: 410px;
   gap: 30px;
 }
 
@@ -55,8 +48,16 @@
   display: flex;
   justify-content: center;
   background-color: #e6d4ff;
-  height: 410px;
-  width: 410px;
+
+  width     : 30vw;
+  height    : 30vw;
+  min-width : 320px;
+  min-height: 320px;
+  max-width : 410px;
+  max-height: 410px;
+  
+  margin: auto;
+
   border-radius: 50%;
   align-items: center;
 }
@@ -72,8 +73,7 @@
   display: flex;
   margin-top: 50px;
   flex-direction: column;
-  width: 820px;
-  margin-left: 150px;
+  width: 100%;
 }
 
 #profile .profile-quote {
@@ -86,7 +86,6 @@
 #profile .profile-name-wrapper {
   display: flex;
   flex-direction: row;
-  margin-bottom: 20px;
 }
 
 #profile .profile-name {
@@ -121,7 +120,7 @@
 
 #profile .profile-contact {
   font-size: 24px;
-  margin-bottom: 27px;
+  margin: 27px 0;
   line-height: 150%;
 }
 
@@ -141,7 +140,7 @@
   border-radius: 10px;
   padding: 45px;
   position: relative;
-  width: 820px;
+  /* width: 820px; */
   box-sizing: border-box;
 }
 
@@ -183,4 +182,19 @@
 
 #profile .btn-cheering:hover {
   background-color: #6417c9;
+}
+
+@media (max-width:1000px) {
+  #profile .profile-card-wrapper {
+    flex-direction: column;
+  }
+  
+  #profile .profile-name-wrapper {
+    margin : auto;
+  }
+  
+  #profile .profile-name-wrapper {
+    flex-direction: column;
+    align-items   : center;
+  }
 }
