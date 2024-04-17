@@ -63,12 +63,12 @@
   #about .cont_box .cont .left {
     font-size: 1.7em;
   }
-  #profile .profile-card-wrapper .section-header {
+  #profile .section-header {
     height: 100px;
     line-height: 100px;
     text-align: left;
   }
-  #profile .profile-card-wrapper .section-header > h2.section-title {
+  #profile .section-header > h2.section-title {
     font-size: 1em;
   }
   #profile .profile-card-wrapper .profile-photo-wrapper img {
