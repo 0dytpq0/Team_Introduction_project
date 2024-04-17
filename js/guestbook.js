@@ -1,163 +1,115 @@
+window.addEventListener("DOMContentLoaded", () => {
+  // URL에서 "from" 매개변수 가져오기
+  const urlParams = new URLSearchParams(window.location.search);
+  const from = urlParams.get("from");
 
-window.addEventListener('DOMContentLoaded', (event) => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const from = urlParams.get('from');
+  // 멤버 리스트
+  let member = ["박요셉", "이성찬", "박하린", "조민수", "김용", "이효현"];
+  // "from" 매개변수로부터 멤버의 인덱스 가져오기
+  let memberIndex = member.indexOf(from);
 
-    let member = ["박요셉", "이성찬", "박하린", "조민수", "김용", "이효현"];
-    let memberIndex = member.indexOf(from);
-    if (memberIndex !== -1) {
-        guestbook(memberIndex);
-    }
-    function guestbook(memberindex) {
+  // 게스트북 함수
+  const guestbook = (memberindex) => {
+    // 멤버 이름 엘리먼트 찾기
+    const memberNameElement = document.getElementById("membername");
+    // 멤버 이름 설정
+    memberNameElement.innerHTML = member[memberindex];
 
-        document.getElementById('membername').innerHTML = `${member[memberindex]}`//해당멤버의 페이지로
+    // 로컬 스토리지에서 해당 멤버의 응원 데이터 가져오기
+    let support =
+      JSON.parse(localStorage.getItem(`supportData${memberindex}`)) || [];
 
-        let support = []  //응원자의 닉네임과 응원글을 저장
+    // 게스트북 렌더링 함수
+    const renderGuestbook = () => {
+      // 게스트북 보드 엘리먼트 찾기
+      const board = document.getElementById("guesthistory");
+      if (support.length > 0) {
+        // 템플릿 초기화
+        let template = "";
 
-        document.querySelector('.sendinfo').addEventListener('click', () => {
-            let nickname = document.getElementById('nickname').value; //닉네임내용
-            let content = document.getElementById('supporttext').value;//응원글내용
-
-            let arr = { user: nickname, content: content };//각각 받고 object자료로 저장  
-            support.push(arr);//object자료를 어레이에 넣는다.
-
-            localStorage.setItem(`supportData${memberindex}`, JSON.stringify(support)); // 로컬 스토리지에 데이터 저장
-            let board = document.getElementById('guesthistory');
-
-            let data = JSON.parse(localStorage.getItem(`supportData${memberindex}`)); // supportData 가져오기
-            // location.reload();
-            if (data.length > 0) {
-                let template = ''; // 템플릿 문자열 초기화
-
-                data.forEach(item => {
-                    template += `<tr>
-                    <td>${item.user}</td>
-                    <td class='changevalue'>${item.content}</td>
-                    <td>
-                    <div>
-                    <img class='removeimg' src="./img/remove.png" alt="remove Image">
-                    </div>
-                    <div>
-                    <img class='editimg' src="./img/edit.png" alt="edit Image">
-                    </div>
-                    </td>
-                    </tr>`; // 템플릿 문자열에 데이터 추가
-                });
-                board.innerHTML = template;
-            } else {
-                let thankyou = `<td id="thankyoutext" style="width:1300px">응원 감사합니다!</td>`;
-                board.innerHTML = thankyou
-            }
-            let removeimg = document.querySelectorAll('.removeimg');
-            removeimg.forEach((item, index) => {
-                item.addEventListener('click', () => {
-                    // 클릭된 이미지의 부모 요소인 <tr>을 삭제합니다.
-                    // console.log(support);
-                    support.splice(index, 1);
-                    localStorage.setItem(`supportData${memberindex}`, JSON.stringify(support)); // 변경된 데이터를 로컬 스토리지에 저장
-
-                    // 삭제 후에는 해당 요소를 다시 렌더링합니다.
-                    guestbook(memberindex);
-                    location.reload();
-                });
-            });
-
-            let editimg = document.querySelectorAll('.editimg');
-            editimg.forEach((item, index) => {
-                item.addEventListener('click', () => {
-                    let tr = item.closest('tr');
-                    let input = tr.querySelector('.changevalue .editinvalue');
-                    let currentValue = tr.querySelector('.changevalue').innerHTML;
-                    if (input) {
-                        return
-                    }
-                    tr.querySelector('.changevalue').innerHTML = `<input class='editinvalue' value="${currentValue}" type="text" ><button class='completion'>완료</button>`;
-
-                    let completionButton = tr.querySelector('.completion');
-                    completionButton.addEventListener('click', () => {
-                        let tr = item.closest('tr');
-                        let input = tr.querySelector('.changevalue input');
-                        let currentValue = input.value;
-                        // 입력 필드로부터 값을 가져와서 수정 셀로 변경
-                        tr.querySelector('.changevalue').innerHTML = `<td class='changevalue'>${currentValue}</td>`;
-                    });
-                })
-            })
-
-        })
-
-
-        window.addEventListener('load', () => {
-            let supportData = localStorage.getItem(`supportData${memberindex}`);
-            if (supportData) {  //로컬스토리지에 supportData가 있으면 아래코드실행
-                support = JSON.parse(supportData);
-                let board = document.getElementById('guesthistory');
-                if (support.length > 0) {
-                    let template = '';
-
-                    support.forEach(item => {
-                        template += `<tr>
+        // 응원글 데이터 반복하여 템플릿 생성
+        support.forEach((item) => {
+          template += `<tr>
                         <td>${item.user}</td>
                         <td class='changevalue'>${item.content}</td>
                         <td>
-                        <div>
-                        <img class='removeimg' src="./img/remove.png" alt="remove Image">
-                        </div>
-                        <div>
-                        <img class='editimg' src="./img/edit.png" alt="edit Image">
-                        </div>
+                            <div><img class='removeimg' src="./img/remove.png" alt="remove Image"></div>
+                            <div><img class='editimg' src="./img/edit.png" alt="edit Image"></div>
                         </td>
-                        </tr>`; // 템플릿 문자열에 데이터 추가
-                    });
-                    board.innerHTML = template;
-                } else {
-                    let thankyou = `<td id="thankyoutext" style="width:1300px">응원 감사합니다!</td>`;
-                    board.innerHTML = thankyou
-                }
-                let removeimg = document.querySelectorAll('.removeimg');
-                removeimg.forEach((item, index) => {
-                    item.addEventListener('click', () => {
-                        support.splice(index, 1);
-                        localStorage.setItem(`supportData${memberindex}`, JSON.stringify(support)); // 변경된 데이터를 로컬 스토리지에 저장
-                        // 삭제 후에는 해당 요소를 다시 렌더링합니다.
-                        guestbook(memberindex);
-                        location.reload();
-                    });
-                });
-
-                let editimg = document.querySelectorAll('.editimg');
-                // console.log(editimg)
-                editimg.forEach((item, index) => {
-                    item.addEventListener('click', () => {
-                        let tr = item.closest('tr');
-                        let input = tr.querySelector('.changevalue input');
-                        let currentValue = tr.querySelector('.changevalue').innerHTML;
-                        if (input) {
-                            return
-                        }
-                        tr.querySelector('.changevalue').innerHTML = `<input class='editinvalue' type="text" value='${currentValue}'><button class='completion'>완료</button>`;
-
-                        let completionButton = tr.querySelector('.completion');
-                        completionButton.addEventListener('click', () => {
-                            let tr = item.closest('tr');
-                            let input = tr.querySelector('.changevalue input');
-                            let currentValue = input.value;
-                            // 입력 필드로부터 값을 가져와서 수정 셀로 변경
-                            tr.querySelector('.changevalue').innerHTML = `
-                <td class='changevalue'>${currentValue}</td>`;
-                            support[index].content = currentValue
-                            localStorage.setItem(`supportData${memberindex}`, JSON.stringify(support));
-                            guestbook(memberindex);
-
-
-                        });
-                    })
-                })
-
-
-            }
-
-
+                    </tr>`;
         });
-    }
+        // 보드에 템플릿 삽입
+        board.innerHTML = template;
+      } else {
+        // 응원글이 없을 때
+        const thankyou = `<td id="thankyoutext" style="width:1300px">응원 감사합니다!</td>`;
+        board.innerHTML = thankyou;
+      }
+
+      // 삭제 버튼 이벤트 리스너 추가
+      const removeimg = document.querySelectorAll(".removeimg");
+      removeimg.forEach((item, index) => {
+        item.addEventListener("click", () => {
+          // 클릭된 응원글 삭제 후 로컬 스토리지 업데이트 및 재렌더링
+          support.splice(index, 1);
+          localStorage.setItem(
+            `supportData${memberindex}`,
+            JSON.stringify(support)
+          );
+          renderGuestbook();
+        });
+      });
+
+      // 수정 버튼 이벤트 리스너 추가
+      const editimg = document.querySelectorAll(".editimg");
+      editimg.forEach((item, index) => {
+        item.addEventListener("click", () => {
+          // 수정 영역 생성
+          const tr = item.closest("tr");
+          let input = tr.querySelector(".changevalue .editinvalue");
+          const currentValue = tr.querySelector(".changevalue").innerHTML;
+          if (input) {
+            return;
+          }
+          tr.querySelector(".changevalue").innerHTML = `
+                      <input class='editinvalue' type="text" value="${currentValue}">
+                      <button class='completion'>완료</button>`;
+          const completionButton = tr.querySelector(".completion");
+          completionButton.addEventListener("click", () => {
+            // 수정된 내용 저장 및 로컬 스토리지 업데이트 후 재렌더링
+            const input = tr.querySelector(".editinvalue");
+            const newValue = input.value;
+            support[index].content = newValue;
+            localStorage.setItem(
+              `supportData${memberindex}`,
+              JSON.stringify(support)
+            );
+            renderGuestbook();
+          });
+        });
+      });
+    };
+
+    // 게스트북 렌더링 호출
+    renderGuestbook();
+
+    // 응원글 전송 버튼 이벤트 리스너 추가
+    const sendInfoButton = document.querySelector(".sendinfo");
+    sendInfoButton.addEventListener("click", () => {
+      // 새 응원글 데이터 추가 및 로컬 스토리지 업데이트 후 재렌더링
+      const nickname = document.getElementById("nickname").value;
+      const content = document.getElementById("supporttext").value;
+      support.push({ user: nickname, content: content });
+      localStorage.setItem(
+        `supportData${memberindex}`,
+        JSON.stringify(support)
+      );
+      renderGuestbook();
+    });
+  };
+
+  // 멤버 인덱스가 유효한 경우에만 게스트북 호출
+  if (memberIndex !== -1) {
+    guestbook(memberIndex);
+  }
 });
