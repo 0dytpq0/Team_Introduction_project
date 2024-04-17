@@ -196,7 +196,7 @@
 @media (min-width: 1480px) {
   #header .container,
   #main .visual img,
-  #how_we_work > #container,
+  #how_we_work > .container,
   #about .title,
   #about .cont_box .cont,
   #contact .contact_container {
