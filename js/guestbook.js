@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", async () => {
+window.addEventListener("DOMContentLoaded", () => {
   // URL에서 "from" 매개변수 가져오기
   const urlParams = new URLSearchParams(window.location.search);
   const from = urlParams.get("from");
@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   let memberIndex = member.indexOf(from);
 
   // 게스트북 함수
-  const guestbook = async (memberindex) => {
+  const guestbook = (memberindex) => {
     // 멤버 이름 엘리먼트 찾기
     const memberNameElement = document.getElementById("membername");
     // 멤버 이름 설정
@@ -95,7 +95,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     // 응원글 전송 버튼 이벤트 리스너 추가
     const sendInfoButton = document.querySelector(".sendinfo");
-    sendInfoButton.addEventListener("click", async () => {
+    sendInfoButton.addEventListener("click", () => {
       // 새 응원글 데이터 추가 및 로컬 스토리지 업데이트 후 재렌더링
       const nickname = document.getElementById("nickname").value;
       const content = document.getElementById("supporttext").value;
