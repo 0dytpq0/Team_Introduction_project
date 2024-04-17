@@ -99,6 +99,9 @@ window.addEventListener("DOMContentLoaded", () => {
       // 새 응원글 데이터 추가 및 로컬 스토리지 업데이트 후 재렌더링
       const nickname = document.getElementById("nickname").value;
       const content = document.getElementById("supporttext").value;
+      if (!content) {
+        return;
+      }
       support.push({ user: nickname, content: content });
       localStorage.setItem(
         `supportData${memberindex}`,
@@ -112,4 +115,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (memberIndex !== -1) {
     guestbook(memberIndex);
   }
+
 });
+
+
