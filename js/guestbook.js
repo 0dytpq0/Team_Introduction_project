@@ -103,7 +103,7 @@ window.addEventListener("DOMContentLoaded", () => {
       if (!content) {
         return;
       }
-      support.push({ user: nickname, content: content });
+      support.unshift({ user: nickname, content: content });
       localStorage.setItem(
         `supportData${memberindex}`,
         JSON.stringify(support)
