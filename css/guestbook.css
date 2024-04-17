@@ -26,6 +26,9 @@
     transition: 0.5s;
 }
 
+#guestbook .backhome>a{width:100px;height:100px;border-radius: 100px;display:block;}
+
+
 #guestbook .backhome:hover {
     box-shadow: 1px 1px 10px #9E43FF;
 }
