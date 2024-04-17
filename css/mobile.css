@@ -193,6 +193,16 @@
   }
 }
 /* 다음엔 바디 사이즈랑 내부 최대 사이즈 정해놓고 가면 이렇게 한땀한땀 안 만들어도 될 듯*/
+@media (max-width: 1000px) {
+  #header .container,
+  #main .visual img,
+  #how_we_work > .container,
+  #about .title,
+  #about .cont_box .cont,
+  #contact .contact_container {
+    width: 95vw;
+  }
+}
 @media (min-width: 1480px) {
   #header .container,
   #main .visual img,
