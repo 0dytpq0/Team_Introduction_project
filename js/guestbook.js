@@ -40,6 +40,7 @@ window.addEventListener("DOMContentLoaded", () => {
         });
         // 보드에 템플릿 삽입
         board.innerHTML = template;
+
       } else {
         // 응원글이 없을 때
         const thankyou = `<td id="thankyoutext" style="width:1300px">응원 감사합니다!</td>`;
@@ -102,11 +103,14 @@ window.addEventListener("DOMContentLoaded", () => {
       if (!content) {
         return;
       }
-      support.push({ user: nickname, content: content });
+      support.unshift({ user: nickname, content: content });
       localStorage.setItem(
         `supportData${memberindex}`,
         JSON.stringify(support)
       );
+
+      document.getElementById("nickname").value = "";
+      document.getElementById("supporttext").value = "";
       renderGuestbook();
     });
   };
