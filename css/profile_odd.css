@@ -56,6 +56,7 @@
   justify-content: center;
   background-color: #e6d4ff;
   height: 410px;
+  width: 410px;
   border-radius: 50%;
   align-items: center;
 }
@@ -127,6 +128,10 @@
 #profile a {
   text-decoration: none;
   color: black;
+}
+
+#profile a:hover {
+  text-decoration: underline;
 }
 
 #profile .profile-attributes {

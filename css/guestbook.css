@@ -26,6 +26,14 @@
     transition: 0.5s;
 }
 
+#guestbook .backhome>a {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    display: block;
+}
+
+
 #guestbook .backhome:hover {
     box-shadow: 1px 1px 10px #9E43FF;
 }
@@ -98,6 +106,18 @@
     font-size: 32px;
 }
 
+#guestbook #nickname:focus {
+    border-color: #9E43FF;
+    outline: none;
+    box-shadow: 0px 0px 3px #9E43FF;
+}
+
+#guestbook #supporttext:focus {
+    border-color: #9E43FF;
+    outline: none;
+    box-shadow: 0px 0px 3px #9E43FF;
+}
+
 #guestbook .sendinfo {
     background: #9E43FF;
     color: #fff;
@@ -107,6 +127,7 @@
     width: 202px;
     height: 80px;
     border: none;
+    cursor: pointer;
 }
 
 /* 응원자 닉네임과 응원글 input */
@@ -152,7 +173,60 @@
 }
 
 #guesthistory tr td:nth-of-type(2) {
-    width: 1148px;
+    width: 997px;
     padding-left: 24px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#guesthistory tr td:nth-of-type(3) {
+    width: 131px;
+    padding-left: 24px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#guesthistory tr td:nth-of-type(3)>div {
+    width: 42px;
+    height: 42px;
+    position: relative;
+}
+
+#guesthistory tr td:nth-of-type(3)>div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+#guestbook .editinvalue {
+    width: 880px;
+    padding-left: 24px;
+    box-sizing: border-box;
+    font-size: 32px;
+    padding-left: 0px;
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+
+#guestbook .editinvalue:focus {
+    border-color: #9E43FF;
+    outline: none;
+    box-shadow: 0px 0px 3px #9E43FF;
+}
+
+#guestbook .completion {
+    background: #9E43FF;
+    color: #fff;
+    width: 87px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
 }
