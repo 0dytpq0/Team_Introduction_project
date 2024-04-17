@@ -212,6 +212,7 @@
     padding-left: 0px;
     padding: 10px 0px;
     box-sizing: border-box;
+    border:1px solid #9E43FF;
 }
 
 #guestbook .editinvalue:focus {
