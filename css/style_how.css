@@ -90,14 +90,10 @@ ul {
 #how_we_work ul > li > div:hover {
   width: 320px;
   height: 320px;
-  transition-duration: 0.5s;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-weight: 700;
   color: #9e43ff;
-  margin-top: -10px;
-  transition-timing-function: ease-in-out;
-  /* margin-right: 20px; */
-  /* padding: 20px; */
+  transition: all 0.5s ease;
 }
 
 #how_we_work ul > li:last-child {
