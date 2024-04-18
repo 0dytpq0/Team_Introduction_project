@@ -33,7 +33,7 @@
     font-size: 1.8em;
   }
   #who_we_are p {
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding-top: 25px;
   }
   #how_we_work {
@@ -55,10 +55,10 @@
     padding: 1em;
   }
   #about .title > h2 {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
   #about .cont_box .cont {
-    padding: 50px 0;
+    padding: 50px 20px;
   }
   #about .cont_box .cont .left {
     font-size: 1.7em;
@@ -74,8 +74,8 @@
   #profile .profile-card-wrapper .profile-photo-wrapper {
     width: 90vw;
     height: 90vw;
-    max-width: 410px;
-    max-height: 410px;
+    max-width: 330px;
+    max-height: 330px;
   }
   #profile .profile-card-wrapper .profile-photo-wrapper img {
     width: 45vw;
@@ -83,7 +83,7 @@
     max-height: 233px;
   }
   #profile .profile-card-wrapper .profile-mbti {
-    font-size: 4em;
+    font-size: 2.5em;
   }
   #profile .profile-card-wrapper .profile-detail .profile-quote {
     font-size: 1.4em;
@@ -106,7 +106,7 @@
     padding: 1em;
   }
   #profile .profile-card-wrapper .profile-detail .profile-attributes .attribute {
-    grid-template-columns: 1fr 2fr;
+    margin-top:30px;
   }
   #profile .profile-card-wrapper .profile-detail .profile-attributes .attribute .attribute-title,
   #profile .profile-card-wrapper .profile-detail .profile-attributes .attribute .attribute-detail {
@@ -129,7 +129,8 @@
     max-height: 233px;
   }
   #profile > .personWrapper > .avatar > .mbti {
-    font-size: 4em;
+    font-size: 2.5em;
+    padding:20px 0;
   }
   #profile > .personWrapper > .details > .catchPhrase {
     font-size: 1.4em;
@@ -202,6 +203,35 @@
     min-height: 32px;
     width: 20wv;
     font-size: 1em;
+  }
+  #profile > .personWrapper > .details > .content > .pros, #profile .personWrapper > .details > .content .workingStyle , #profile .profile-attributes{
+    display: block;
+  }
+
+  .attribute-title,
+  #profile .personWrapper > .details > .content .workingStyle{
+    margin-top:20px;
+  }
+
+  #profile .attribute-title,
+  #profile > .personWrapper > .details > .content > .pros > div, #profile > .personWrapper > .details > .content .workingStyle > div{
+    min-height:40px;
+  }
+  #profile .btn-cheering{
+    top: 117%;
+    right:0;
+    left:0;
+    margin:0 auto;
+  }
+
+  #who_we_are .container{
+    padding:0 30px;
+  }
+  #profile .profile-main{
+    gap: 10px;
+  }
+  #profile .profile-detail{
+    margin-top:20px;
   }
 }
 /* 다음엔 바디 사이즈랑 내부 최대 사이즈 정해놓고 가면 이렇게 한땀한땀 안 만들어도 될 듯*/
